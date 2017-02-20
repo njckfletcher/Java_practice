@@ -1,0 +1,55 @@
+Memory Allocation:
+	Byte - 8bits - 2^8 - 256 ---> -128 to -1|0 to 127 (only 127 because 0 counts too!)
+	Short - 16bits - 2^16 - 65536 ---> -32768 to -1|0 to 32767
+	Int - 32bits - 2^2 - 4,294,967,296
+	Long - 64bits - 2^64 - 18,446,744,073,709,551,616
+	Float - 32bits
+	Double - 64bits
+	Char - 16bits - Unicode
+	boolean - JVM Dependent
+
+Default values:
+	Byte - 0
+	Short - 0
+	Int - 0
+	Long - 0
+	Float - 0.0
+	Double - 0.0
+	Char - '\u0000' (blank space)
+	Boolean - false
+
+Type conversion:
+	***THINK: Small to big does not need specification!***
+	- byte>short>int>long (Implicitly; does not need conversion to be specified)
+	- byte<short<int<long (Explicit casting; requires the conversion to be specified)
+	- float>double (Implicit)
+	- float<double (Explicit)
+	- boolean (cannot be casted; different data type)
+	
+	Type Casting:
+		
+		Implicit Casting {
+			byte c = 120;
+			short d = c;
+		}
+		
+		Explicit Casting {
+			short c = 234;
+			byte d = (byte)c;
+		}
+		
+Representing +Ve and -Ve numbers:
+	
+	byte b = 120
+	b > 01111000 (8 bits)
+	
+	byte c = -120
+	
+	~Twos compliment~
+	1. Flip all the bytes (000 > 111; 110 > 001)
+	2. Add 1 (0111 > 1000)
+	
+	120 > 01111000
+	Flip > 10000111
+	Add 1 >      +1
+	-120 > 10001000

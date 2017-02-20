@@ -1,0 +1,49 @@
+Arrays
+
+Declaration:
+	- int[] marks;
+	- byte[] age;
+	
+	Less readable:
+	- int marks[]
+	- byte age[]
+
+***EVERY ARRAY IS AN OBJECT!  MUST BE CONSTRUCTED!***
+
+Construction:
+	Multi-line:
+		- int[] marks;
+		- marks = new int[5] <<<---- '5' indicates the size of the array; this is mandatory
+		
+	Single-line:
+		- int[] marks = new int[5]
+		
+Initialization:
+	- This is where we 'load' all of the values into the array.
+	
+	marks[0] = 20;
+	marks[1] = 49;
+	marks[2] = 30;
+	marks[3] = 67;
+	marks[4] = 35;
+	
+	- Array initializer: int[] marks = {20, 39, 40, 30} <<<---- indexes 0-3; length of 4
+	
+Two dimensional arrays:
+	Uniform:
+		- int[][] marks = new int[2][3]; <<<---- 2 arrays of size 3
+		
+		To assign values:
+			- marks[0][0] = 30;
+			- marks[0][2] = 45;
+			- marks[1][3] = 69;
+			etc..
+	
+	Non-uniform:
+		- int[][] marks = new int[2][] <<<---- indicates the parent array will hold 2 child arrays; leave second one blank (parent array size is MANDATORY!)
+		- marks[0] = new int[3];
+		- marks[1] = new int[4];
+	
+	
+	
+	

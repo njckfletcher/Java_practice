@@ -1,0 +1,21 @@
+ArrayLists
+
+	- Can expand in size.
+	- Added in sequence (0, then 1, then 2, ...)
+	- Indexes start at zero.
+	- Exists in java.util
+	
+	ArrayLists methods:
+		- add(index, Object) - This methods adds Object at the given index in the ArrayList. This causes all of the other objects to shift.
+		- add(Object) - This method adds Object to the end of the ArrayList.
+		- get(index) - This method retrieves an object at the index in the ArrayList. It does not remove the object.
+		- set(index, Object) - This method will replace the object at index with Object in the ArrayList.
+		- size()- This method returns the number of elements in the ArrayList.
+		- remove(index)- This method removes the object at index in the ArrayList. This causes all of the other objects to shift.
+		- clear()
+		- clone()
+		- contains(Object o)
+		- indexOf(Object o)
+		- isEmpty()
+		
+	

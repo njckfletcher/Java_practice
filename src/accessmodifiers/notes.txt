@@ -1,0 +1,59 @@
+Access Modifiers
+
+Class-level Access Modifiers:
+
+	Public:
+		- When a class is marked as public, it is visible to all other classes which are inside and outside the package. -Visible to everyone..
+		- A class marked as public is accessible to all classes in other packages, but needs to include an import statement.
+		- There is no need for an import statement if the class is in the same package as the public class.
+		
+	Default (AKA package-private):
+		- Uses no key word.  When no access modifier is declared, it is given default level access.
+		- Only visible to classes within the same package.
+		
+	*** protected and private access modifiers are not applicable to the class level declaration! ***
+	
+Member-level Access Modifiers:
+	*** Methods and Instance variables! ***
+	Public:
+		- A member with public access is visible to all the classes inside and outside the package.
+		- The class in which the member exists inside should also be visible to the accessing class.
+		
+	Default (AKA package-private):
+		- A member marked with default access will be visible to the classes that are in the same package.
+	
+	Protected:
+		- A member marked with protected is visible to all classes in the same package.
+		- Protected members are also accessible from outside the package, but the accessing class should be a subclass of the member class
+		
+			i.e. public class Ferrari extends Car{ <<<---- Ferrari is a subclass of Car (Ferrari is in a separate package!!!)
+			
+			- When calling the protected variable from Car within Ferrari, user 'super.'
+			
+	Private:
+		- A member marked as private will only be accessible within that class.
+		
+			i.e:
+			
+			public class Car {
+				private String keyCode;
+			}
+			
+			public class Thief {
+				void steal() {
+					Car c = new Car();
+					c.keyCode; <<<---- This will fail because keyCode is private to the class Car.
+				}
+			}
+
+			
+Local Variables:
+
+	- No access modifiers should be applied to local variables!
+
+	public class Calculator {
+		public int addition(int a, int b) {
+			int c = a + b; <<<---- This is a local variable; only exists within the addition method; terminates after method is run
+			return c;
+		}
+	}
