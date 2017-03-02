@@ -1,0 +1,35 @@
+Non Access Modifiers
+
+Final:
+	- Can be applied to classes, methods, instance variables, local variables.
+	- A class marked as final cannot be extended.
+	- A method marked as final cannot be overridden.
+	- A primitive data type or an object reference will not change its value or object when marked final.
+	
+Static:
+	- Can be applied to methods and variables.
+	- A method or variable marked as static belongs to the class file.
+	- A static member should be accessed using the class name.
+	- You do not use instances to call static members; does not depend on instances
+	
+	Rules:
+		- The static variable and static methods are called class members.
+		- A method marked as static can only access other static methods and variables directly.
+		- To access the instance variables and methods, a static method should have an instance on which the object members should be invoked.
+
+Abstract:
+	- Can be applied to classes and methods only.
+	- When a method is marked as abstract, it should contain no implementation.
+		i.e. public abstract void move();
+	- Abstract methods should end with ';' and not with '{ }'.
+	- When a method is marked as abstract, the class should also be marked as abstract.
+	- A class can be marked as abstract without any abstract methods in it.
+	- You cannot create an instance of an abstract class.
+	- An abstract method should be overridden in the subclass or should be marked as abstract.
+	- Abstract methods can have concrete (non-abstract) methods in it.
+	- Abstract methods cannot be marked as final.
+	- Abstract classes cannot be marked as final.
+	*** Overall, when you mark a class as abstract, you are telling the program that it needs to be subclassed.
+		When you mark a method as abstract, you are telling the program that it needs to be overridden in the subclass. ***
+	- Abstract methods cannot be static.
+	- Abstract methods cannot be private.
